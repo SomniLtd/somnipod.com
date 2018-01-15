@@ -1,8 +1,3 @@
-body {  font: normal 16px / 1.5 Montserrat, sans-serif; }
-
-
-
-
 /* DEBUG
 body {  background: repeating-linear-gradient(rgba(0,0,0,0) 0px, rgba(0,0,0,0) 24px, rgba(0,0,0,0.1) 24px, rgba(0,0,0,0.1) 48px);}
 .row{outline:1px solid #f00;}
@@ -11,53 +6,77 @@ form{outline:1px solid #0f0;}
 */
 
 
-@media(min-width:480px){  .container{width:480px;} }
-@media(min-width:720px){  .container{width:720px;} }
-@media(min-width:960px){  .container{width:960px;} }
+
+
+
+body {  font: normal 16px / 1.5 Montserrat, sans-serif; color:#666;}
+.container{width:480px;}
+@media(min-width:600px){  .container{width:600px;} }
+@media(min-width:992px){  .container{width:992px;} }
 @media(min-width:1200px){  .container{width:1200px;} }
 
 
 
 
 
+/* TEXT AND HEADERS */
+h1{font: bold 4em / 2 Montserrat, sans-serif; margin:0;color:#333}
+h2{font: bold 2.5em / 1.8 Montserrat, sans-serif; margin:0;color:#333}
+h3{font: bold 2em / 1.5 Montserrat, sans-serif; margin:0;color:#333}
+h4{font: bold 1.5em / 3 Montserrat, sans-serif; margin:0;color:#333}
+h5{font: bold 1.25em / 2.4 Montserrat, sans-serif; margin:0;color:#333}
+h6{font: bold 1em / 1.5em Montserrat, sans-serif; margin:0;color:#333}
 
-h1{font: bold 4em / 2 Montserrat, sans-serif; margin:0;}
-h2{font: bold 2.5em / 1.8 Montserrat, sans-serif; margin:0;}
-h3{font: bold 2em / 2.25 Montserrat, sans-serif; margin:0;}
-h4{font: bold 1.5em / 3 Montserrat, sans-serif; margin:0;}
-h5{font: bold 1.25em / 2.4 Montserrat, sans-serif; margin:0;}
-h6{font: bold 1em / 1.5em Montserrat, sans-serif; margin:0;}
-p, div, span, input{font: normal 1em / 1.5 Montserrat, sans-serif}
-p, input{margin: 0 0 1.5em 0; }
-input{border:1px solid #999;}
-p.diminished{font normal 0.5em / 1em Montserrat, sans-serif;color:#aaa;}
+p, div, span{font: normal 1em / 1.5 Montserrat, sans-serif}
+p{margin: 0 0 1.5em 0; }
+p.diminished{font:normal 0.875em / 1.5em Montserrat, sans-serif;color:#aaa;}
+b{font-weight:bold;}
 
-hr {border-top: 1px solid #8c8b8b;text-align: center;margin:4em 0;}
-hr::after {
-  content: "Hello";
-  color: black;
+
+
+/* FORM ELEMENTS */
+textarea:focus, input:focus{outline: none;color:}
+.input-field{margin-top:1.5em;}
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default){
+  font: normal 1em / 1.5 Montserrat, sans-serif;
+  border:1px solid #aaa;
+  box-sizing: border-box;
+  margin: 0 0 0.25em 0 ;
+  padding:0 0 0 0.75em;
+  background-color:white;
+  height:2.75em;
 }
 
-/*
-	content: "\263D";
-	display: inline-block;
-	position: relative;
-	top:-0.75em;
-	padding: 0 10px;
-	background: white;
-	color: #8c8b8b;
-	font-size: 1em;
-  transform:rotate(30deg)
-*/
+.input-field label{  padding:0 0 0 0.75em; }
+.input-field label:not(.label-icon).active{ transform: translateX(-0.625em) translateY(-1.25em) scale(0.875)}
+
+.input-field textarea{
+  height:3em;
+  background-color:white;
+  border:1px solid #aaa;
+  resize: none;font: normal 1em / 1.5 Montserrat, sans-serif;
+  padding:0 0 0 0.75em;}
+.input-field label.active{color:#26a69a}
 
 
 
 /* LAYOUTS */
-.container{margin:0 auto 3em auto;  }
+.container{margin:0 auto 0 auto;  }
 .container .row{margin:0 0 0 0;}
 .container .row .col{padding:0 0 0 1.5em; }
 
-
-/* FORM ELEMENTS */
-
-.input-field{margin-top:1.5em; }
+hr {text-align: center;border:none;margin:4em 0;height: 1px;background: linear-gradient(90deg, rgba(0,0,0,0) 0% , rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.7) 85%, rgba(0,0,0,0) 100%);}
+hr::after {  content: "\263D";  color: #8c8b8b;  display:inline-block;
+  position:absolute;  transform:rotate(30deg);  background-color:white;  font-size: 1.5em;  margin-top:-0.75em;  padding:0 0.5em}
