@@ -1,0 +1,32 @@
+<style>
+@media(min-width:1200px)
+{
+  p{font-size:1.25em;}
+}
+
+</style>
+
+{{#object}}
+
+<div class="starScene" style="min-height:400px;background-image:url({{metadata.image.imgix_url}});"></div>
+
+
+<div class="container">
+  <div class="row">
+
+      <div class="col s12 l8 push-l2 blogPost"  data-href="/{{ slug }}">
+          <br>
+            <h2><a href="/{{ slug }}">{{ title }}</a></h2>
+
+            <div>
+              <a href="/author/{{ metadata.author.slug }}"><div style="background-image: url({{ metadata.author.metadata.image.imgix_url }}?w=100)"></div></a>
+              <div>by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ created }}</div>
+            </div>
+
+            <p>{{{ content }}}</p>
+
+    </div>
+  </div>
+</div>
+
+{{/object }}

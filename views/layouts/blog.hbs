@@ -1,1 +1,37 @@
-BLOG
+
+
+
+
+<br>
+<div class="container">
+  <div class="row">
+
+    {{#objects}}
+
+      <div class="col s12 m6 l4 blogCard"  data-href="/{{ slug }}">
+
+                <img src="{{ metadata.image.imgix_url }}" alt="" class="responsive-img">
+
+                  <h3><a href="/{{ slug }}">{{ title }}</a></h3>
+
+                  <div>
+                    <a href="/author/{{ metadata.author.slug }}">
+                      <div class="blog__author-image" style="background-image: url({{ metadata.author.metadata.image.imgix_url }}?w=100)"></div>
+                    </a>
+                    <div class="blog__author-title">by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ created }}</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div>{{{ metadata.teaser }}}</div>
+
+                  <div>{{{ metadata.description }}}</div>
+
+                  <div><a href="/{{ slug }}">Read more...</a></div><br>
+
+    </div>
+
+    {{/objects }}
+
+
+  </div>
+</div>

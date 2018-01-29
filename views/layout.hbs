@@ -2,8 +2,8 @@
 <html>
   <head>
 
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
 
     <title>{{title}}</title>
@@ -20,19 +20,75 @@
     <link rel="shortcut icon" href="/favicon.ico?v=Jy7N06xGGY">
     <meta name="theme-color" content="#ffffff">
 
-
-
-
   </head>
   <body>
+
+
+    <!-- Header -->
+
+    {{#unless hideHeader}}
+    <div class="starScene">
+    <div class="container">
+
+      <a href="/"><img class="logo-small" alt="logo" src="logo/somnipod.svg"></a>
+      <div style="float:right;"><a href="/blog" style="font-weight:200;color:white;line-height:3em;">Blog</a></div>
+
+    </div>
+    </div>
+    {{/unless}}
+
+    <!-- End header -->
+
     {{{body}}}
+
+
+    <!-- footer -->
+    <div style="background-color:#1f4385">
+    <div class="container">
+      <div class="row">
+
+        <br><br>
+
+        <div class="col s12 l6">
+          <h4>About Us</h4>
+          <p style="color:white;font-weight:200">We're a passionate bunch of repeat entrepreneurs who don't plan to lose any sleep over our next exciting project - the Somnipod.
+            We aim to bring a unique passion for mindfulness, self-reflection, healthy living and excitement to the mystical world of sleep.</p>
+        </div>
+
+        <div class="col s5 m6 l2 push-l1">
+          <h4>Follow Us</h4>
+          <p>
+            <a href="/blog">Blog</a><br>
+            <a href="https://www.twitter.com/@somni_pod" target="_blank">Twitter</a><br>
+            <a href="https://www.facebook.com/somnipod" target="_blank">Facebook</a><br>
+            <!--<a href="#">Instagram</a><br>-->
+          </p>
+        </div>
+
+        <div class="col s7 m6 l3 push-l1">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sleepbetter@somnipod.com?subject=Sleep's over - an important email from the website!" target="_blank">sleepbetter@somnipod.com</a></p>
+        </div>
+      </div>
+
+      <div class="row center-align">
+        <br><br>
+        <p class="diminished" style="color:white;">&copy; 2018 Somni Ltd - Sleep Better. Sleep Safer.</p>
+      </div>
+
+    </div>
+    </div>
+    <!-- footer -->
+
+
+
 
 
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/validation.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/validation.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112499248-1"></script>
@@ -67,6 +123,7 @@
 
 
     <!-- Icon credits: https://www.flaticon.com/packs/sleep-time-outlined -->
+    <div id="gridOverlay"></div>
   </body>
 
 

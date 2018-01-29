@@ -3,17 +3,37 @@ body {  background: repeating-linear-gradient(rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2
 .row{outline:1px solid #f00;}
 .col {  background: repeating-linear-gradient(90deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 24px, rgba(0,0,0,0.1) 24px, rgba(0,0,0,0.1) 48px);outline:1px solid #00f}
 form{outline:1px solid #0f0;}
+
 */
 
+#gridOverlay{ background: repeating-linear-gradient(rgba(0,0,0,0) 0px, rgba(0,0,0,0) 24px, rgba(0,0,0,0.1) 24px, rgba(0,0,0,0.1) 48px);width:100%;height:100%;pointer-events:none;
+  position:fixed;top:0;left:0;width:100%;height:100%;display:none;}
 
 
 
 
 body {  font: normal 16px / 1.5 Montserrat, sans-serif; color:#666;}
 .container{width:480px;}
-@media(min-width:600px){  .container{width:600px;} }
-@media(min-width:992px){  .container{width:992px;} }
-@media(min-width:1200px){  .container{width:1200px;} }
+@media(min-width:600px){
+  .container{width:600px;}
+}
+@media(min-width:992px){
+  .container{width:992px;}
+}
+
+@media(min-width:1200px){
+  .container{width:1200px;}
+}
+
+
+@media(max-width:991px){
+.m6:nth-child(2n+1){clear:left;}
+}
+
+@media(min-width:992px){
+.l4:nth-child(3n+1){clear:left;}
+}
+
 
 
 
@@ -22,7 +42,7 @@ body {  font: normal 16px / 1.5 Montserrat, sans-serif; color:#666;}
 /* TEXT AND HEADERS */
 h1{font: 400 4em / 2 Montserrat, sans-serif; margin:0;color:#333}
 h2{font: 400 2.5em / 1.8 Montserrat, sans-serif; margin:0;color:#333}
-h3{font: 400 2em / 1.5 Montserrat, sans-serif; margin:0;color:#333}
+h3{font: 400 1.8em / 1.6666666666666666666em Montserrat, sans-serif; margin:0;color:#333}
 h4{font: 400 1.5em / 2 Montserrat, sans-serif; margin:0.5em 0 0 0;color:#3f76d4}
 h5{font: 400 1.25em / 2.4 Montserrat, sans-serif; margin:0;color:#333}
 h6{font: 400 1em / 1.5em Montserrat, sans-serif; margin:0;color:#333}
@@ -33,7 +53,7 @@ p.diminished{font:normal 0.875em / 1.5em Montserrat, sans-serif;color:#aaa;}
 b{font-weight:bold;}
 
 
-.jumbo{background: linear-gradient(#1f4385, #3f76d4);padding-top:2em;}
+.jumbo{background: linear-gradient(rgba(31, 67, 133, 0.0) 20%, rgba(63, 118, 212,1));padding-top:2em;}
 
 @media(min-width:600px){  .jumbo{padding-top:4em;} }
 @media(min-width:992px){  .jumbo{padding-top:4em;} }
@@ -43,6 +63,7 @@ b{font-weight:bold;}
 .jumbo h2, .jumbo-p{color:#fff5da}
 .jumbo-p{font:200 1.5em / 1.5 Montserrat;}
 .jumbo .logo{height:80px;}
+.logo-small{height:44px;padding: 4px 0 0 0}
 .jumbo .input-field button{height:4em;}
 
 /*
@@ -99,5 +120,9 @@ input[type=search]:not(.browser-default){
 .container .row .col{padding:0 0 0 1.5em; }
 
 hr {text-align: center;border:none;margin:4em 0;height: 1px;
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0% , rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.7) 48%, rgba(0,0,0,0.0) 48%, rgba(0,0,0,0.0) 52%, rgba(0,0,0,0.7) 52%, rgba(0,0,0,0.7) 85%, rgba(0,0,0,0) 100%);}
-hr::after {  content: "\263D";  color: #8c8b8b;  display:inline-block;  position:absolute;  transform:rotate(30deg);  font-size: 1.5em;  margin:-0.8em 0 0 -0.25em;}
+  background: linear-gradient(90deg, rgba(63,118,212,0) 0% , rgba(63,118,212,0.7) 15%, rgba(63,118,212,0.7) 45%, rgba(63,118,212,0.0) 48%, rgba(63,118,212,0.0) 53%, rgba(63,118,212,0.7) 56%, rgba(63,118,212,0.7) 85%, rgba(63,118,212,0) 100%);}
+hr::after {  content: "\263D";  color: #3f76d4;  display:inline-block;  position:absolute;  transform:rotate(30deg);  font-size: 1.5em;  margin:-0.8em 0 0 -0.25em;}
+
+
+.starScene{background-image:url(/images/night-sky-3.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;}
+.winForm{border:1px solid #3f76d4; background-color:#fffcf2;padding:0 1.5em 1.5em 1.5em;margin-right: 0.5em;border-radius:8px;box-shadow: 0px 0px 5px #1f4385;}
