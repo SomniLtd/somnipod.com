@@ -20,7 +20,7 @@
 
             <div>
               <a href="/author/{{ metadata.author.slug }}"><div style="background-image: url({{ metadata.author.metadata.image.imgix_url }}?w=100)"></div></a>
-              <div>by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ created }}</div>
+              <div>by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ createdNice }}</div>
             </div>
 
             <p>{{{ content }}}</p>
