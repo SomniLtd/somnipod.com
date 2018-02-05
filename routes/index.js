@@ -2,8 +2,18 @@ var express = require('express');
 var router = express.Router();
 
 
+var host = router.get('host');
+
+//console.log("host", host());
+
+
+
+
+
+
+    /* SOMNIPOD.COM */
     router.get('/', function(req, res, next) {  res.render('layouts/index', require('../models/index.js').data  );    });
-    router.get('/yes', function(req, res, next) {  res.render('layouts/yes', require('../models/yes.js').data  );    });
+    router.get('/thanks', function(req, res, next) {  res.render('layouts/thanks'); });  // require('../models/thanks.js').data  );
     router.get('/somni-app', function(req, res, next) {  res.render('layouts/apps', require('../models/apps.js').data  );    });
 
     router.get('/frequently-asked-questions-about-somnipod', function(req, res, next) {  res.render('layouts/faq', require('../models/faq.js').data  );    });

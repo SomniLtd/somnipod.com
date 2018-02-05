@@ -1,11 +1,3 @@
-<style>
-@media(min-width:1200px)
-{
-  p{font-size:1.25em;}
-}
-
-</style>
-
 {{#object}}
 
 <div class="starScene" style="min-height:400px;background-image:url({{metadata.image.imgix_url}});"></div>
@@ -23,7 +15,7 @@
               <div>by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ createdNice }}</div>
             </div>
 
-            <p>{{{ content }}}</p>
+            {{{ content }}}
 
     </div>
   </div>

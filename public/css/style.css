@@ -111,16 +111,18 @@ input[type=search]:not(.browser-default){
 .input-field label{  padding:0 0 0 0.75em; }
 .input-field label:not(.label-icon).active{ transform: translateX(-0.625em) translateY(-1.25em) scale(0.875);color:#9e9e9e}
 .input-field textarea{height:3em;background-color:white;border:1px solid #aaa;resize: none;font: normal 1em / 1.5 Montserrat, sans-serif;padding:0 0 0 0.75em;}
-.input-field label.active{color:#26a69a}
-.input-field input:focus{border-bottom-color:#3f76d4 !important;}
-.input-field button{background-color:#feda6e;color:#666;width:100%;height:2.75em;letter-spacing:0;}
+.input-field input:focus{border-bottom-color:#fe9a0d !important;box-shadow: 0 1px 0 0 #fe9a0d !important;}
+.input-field button{background-color:#f9af31;color:#fff;width:100%;height:2.75em;letter-spacing:0;}
 .input-field button:active, .input-field button:hover{background-color:#fe9a0d;}
 
 
 /* LAYOUTS */
 .container{margin:0 auto 0 auto;  }
 .container .row{margin:0 0 0 0;}
+
+/*
 .container .row .col{padding:0 0 0 1.5em; }
+*/
 
 hr {text-align: center;border:none;margin:4em 0;height: 1px;
   background: linear-gradient(90deg, rgba(63,118,212,0) 0% , rgba(63,118,212,0.7) 15%, rgba(63,118,212,0.7) 45%, rgba(63,118,212,0.0) 48%, rgba(63,118,212,0.0) 53%, rgba(63,118,212,0.7) 56%, rgba(63,118,212,0.7) 85%, rgba(63,118,212,0) 100%);}
@@ -130,5 +132,11 @@ hr.smallHR{margin: calc(1.5em - 1px) 0 1.5em 0;}
 
 
 .starScene{background-image:url(/images/night-sky-3.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;}
-.winForm{border:1px solid #3f76d4; background-color:#fffcf2;padding:0 1.5em 1.5em 1.5em;margin-right: 0.5em;border-radius:8px;box-shadow: 0px 0px 5px #1f4385;
+.winForm{border:1px solid #3f76d4; background-color:#fef7eb; padding:0 1.5em 1.5em 1.5em;margin-right: 0.5em;border-radius:8px;box-shadow: 0px 0px 5px #1f4385;
       margin-bottom: 6px;}
+
+
+@media(min-width:1200px)
+{
+  .blogPost p{font-size:1.25em;font-weight:200;}
+}
